@@ -136,14 +136,17 @@ public class MusicOrganizer
         return valid;
     }
     
-    public void listMatching(String searchString)
-    {
-        
+        public void listMatching(String searchString)
+        {
+        boolean searching = true;
         for(String filename : files) {
             if(filename.contains(searchString)) {
                 // A match.
                 System.out.println(filename);
-
+                searching = false;
+                }
+            else{
+                System.out.println("file not found");           
             }
         }
     }
