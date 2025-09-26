@@ -55,10 +55,14 @@ public class MusicOrganizer
     /**
      * Show a list of all the files in the collection.
      */
-    public void listAllFiles()
+    public void  listWithIndex()
+    
     {
+        int position = 0;
+        
         for(String filename : files) {
-            System.out.println(filename);
+            System.out.println(position + ": " + filename);
+            position++;
         }
     }
     
