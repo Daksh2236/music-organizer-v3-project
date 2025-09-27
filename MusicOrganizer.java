@@ -150,4 +150,13 @@ public class MusicOrganizer
             System.out.println("file not found");
         }   
     }
+    
+    public void playArtistSamples(String artist)
+    {
+        for(String filename : files) {           
+            if(filename.contains(artist)) {           
+              player.playSample(filename);
+            }
+        }    
+    }
 }
